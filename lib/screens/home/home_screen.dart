@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(), // app bar
-      body: const Body(),          // body
+      body: const Body(), // body
     );
   }
 
@@ -19,14 +19,18 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       elevation: 0,
       leading: IconButton(
-        icon: SvgPicture.asset("assets/icons/back.svg"),
+        icon: const Icon(
+          Icons.arrow_back_ios_new,
+          color: kTextColor,
+        ),
         onPressed: () {},
       ),
       actions: <Widget>[
         IconButton(
           onPressed: () {},
-          icon: SvgPicture.asset(
-            "assets/icons/search.svg",
+          icon: const Icon(
+            Icons.search_outlined,
+            size: 30,
             // this icon (svg) is by default white so we have to make it black
             // ignore: deprecated_member_use
             color: kTextColor,
@@ -35,14 +39,17 @@ class HomeScreen extends StatelessWidget {
         IconButton(
           splashColor: Colors.transparent,
           onPressed: () {},
-          icon: SvgPicture.asset(
-            "assets/icons/cart.svg",
+          icon: const Icon(
+            Icons.shopping_cart_outlined,
+            size: 30,
             // this icon (svg) is by default white so we have to make it black
             // ignore: deprecated_member_use
             color: kTextColor,
           ),
         ),
-        const SizedBox(width: kDefaultPadding/2,)
+        const SizedBox(
+          width: kDefaultPadding / 2,
+        )
       ],
     );
   }
