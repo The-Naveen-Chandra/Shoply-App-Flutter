@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shoply_app/constants.dart';
 import 'package:shoply_app/models/product.dart';
+import 'package:shoply_app/screens/details/details_screen.dart';
 import 'package:shoply_app/screens/home/components/categories.dart';
 import 'package:shoply_app/screens/home/components/item_card.dart';
 
@@ -36,11 +37,17 @@ class Body extends StatelessWidget {
               ),
               itemBuilder: (context, index) => ItemCard(
                 product: products[index],
-                press: () {},
+                press: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        DetailsScreen(product: products[index]),
+                  ),
+                ),
               ),
             ),
           ),
-        )
+        ),
       ],
     );
   }
