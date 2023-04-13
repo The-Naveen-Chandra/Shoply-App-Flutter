@@ -20,8 +20,9 @@ class HomeScreen extends StatelessWidget {
       elevation: 0,
       leading: IconButton(
         icon: const Icon(
-          Icons.arrow_back_ios_new,
+          Icons.arrow_back,
           color: kTextColor,
+          size: 30,
         ),
         onPressed: () {},
       ),
