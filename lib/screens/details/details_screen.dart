@@ -3,6 +3,7 @@ import 'package:shoply_app/models/product.dart';
 
 class DetailsScreen extends StatelessWidget {
   final Product product;
+
   const DetailsScreen({Key? key, required this.product}) : super(key: key);
 
   @override
@@ -13,7 +14,13 @@ class DetailsScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: product.color,
         elevation: 0,
-
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back,
+            size: 30,
+          ),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
     );
   }
