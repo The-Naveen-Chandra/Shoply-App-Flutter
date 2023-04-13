@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shoply_app/constants.dart';
 import 'package:shoply_app/models/product.dart';
+import 'package:shoply_app/screens/details/components/body.dart';
 
 class DetailsScreen extends StatelessWidget {
   final Product product;
@@ -13,6 +14,7 @@ class DetailsScreen extends StatelessWidget {
       // each product have a unique color
       backgroundColor: product.color,
       appBar: buildAppBar(context),
+      body: Body(),
     );
   }
 
