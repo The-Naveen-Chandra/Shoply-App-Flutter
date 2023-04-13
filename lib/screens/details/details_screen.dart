@@ -7,8 +7,14 @@ class DetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      // each product have a unique color
+      backgroundColor: product.color,
+      appBar: AppBar(
+        backgroundColor: product.color,
+        elevation: 0,
 
+      ),
     );
   }
 }
