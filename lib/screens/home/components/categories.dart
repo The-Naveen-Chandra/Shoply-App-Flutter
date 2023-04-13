@@ -52,7 +52,8 @@ class _CategoriesState extends State<Categories> {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(top: kDefaultPadding / 4), // top padding 5
+              margin: const EdgeInsets.only(top: kDefaultPadding / 4),
+              // top padding 5
               height: 2,
               width: 30,
               color: selectedIndex == index ? Colors.black : Colors.transparent,

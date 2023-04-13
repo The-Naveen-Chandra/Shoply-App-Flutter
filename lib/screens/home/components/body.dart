@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shoply_app/constants.dart';
+import 'package:shoply_app/models/product.dart';
 import 'package:shoply_app/screens/home/components/categories.dart';
+import 'package:shoply_app/screens/home/components/item_card.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -21,9 +23,22 @@ class Body extends StatelessWidget {
           ),
         ),
         const Categories(),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+            child: GridView.builder(
+                itemCount: products.length,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: kDefaultPadding,
+                  mainAxisSpacing: kDefaultPadding,
+                  childAspectRatio: 0.75,
+                ),
+                itemBuilder: (context, index) =>
+                    ItemCard(product: products[index], press: () {})),
+          ),
+        )
       ],
     );
   }
 }
-
-
