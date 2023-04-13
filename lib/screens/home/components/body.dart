@@ -27,15 +27,18 @@ class Body extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
             child: GridView.builder(
-                itemCount: products.length,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: kDefaultPadding,
-                  mainAxisSpacing: kDefaultPadding,
-                  childAspectRatio: 0.75,
-                ),
-                itemBuilder: (context, index) =>
-                    ItemCard(product: products[index], press: () {})),
+              itemCount: products.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: kDefaultPadding,
+                mainAxisSpacing: kDefaultPadding,
+                childAspectRatio: 0.75,
+              ),
+              itemBuilder: (context, index) => ItemCard(
+                product: products[index],
+                press: () {},
+              ),
+            ),
           ),
         )
       ],
