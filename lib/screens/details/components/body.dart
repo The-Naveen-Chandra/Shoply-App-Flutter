@@ -42,8 +42,11 @@ class Body extends StatelessWidget {
                   child: Column(
                     children: [
                       ColorAndSize(product: product),
+                      const SizedBox(height: kDefaultPadding),
                       Description(product: product),
+                      const SizedBox(height: kDefaultPadding + 10),
                       const CounterWithLikeIcon(),
+                      const SizedBox(height: kDefaultPadding),
                       AddtToCart(product: product),
                     ],
                   ),
