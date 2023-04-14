@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shoply_app/constants.dart';
 import 'package:shoply_app/models/product.dart';
+import 'package:shoply_app/screens/details/components/add_to_cart.dart';
 import 'package:shoply_app/screens/details/components/color_and_size.dart';
 import 'package:shoply_app/screens/details/components/counter_with_like_icon.dart';
 import 'package:shoply_app/screens/details/components/description.dart';
@@ -43,6 +44,7 @@ class Body extends StatelessWidget {
                       ColorAndSize(product: product),
                       Description(product: product),
                       const CounterWithLikeIcon(),
+                      AddtToCart(product: product),
                     ],
                   ),
                 ),
