@@ -53,7 +53,7 @@ class ProductTitleWithImage extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                width: kDefaultPadding,
+                width: kDefaultPadding + 30,
               ),
               Expanded(
                 child: Image.asset(

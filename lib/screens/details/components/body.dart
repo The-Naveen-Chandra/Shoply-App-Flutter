@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shoply_app/constants.dart';
 import 'package:shoply_app/models/product.dart';
+import 'package:shoply_app/screens/details/components/color_and_size.dart';
 import 'package:shoply_app/screens/details/components/product_title_with_image.dart';
 
 class Body extends StatelessWidget {
@@ -27,7 +28,7 @@ class Body extends StatelessWidget {
                     left: kDefaultPadding,
                     right: kDefaultPadding,
                   ),
-                  height: 500,
+                  // height: 500,
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -37,17 +38,7 @@ class Body extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      Row(
-                        children: [
-                          Column(
-                            children: [
-                              Text(
-                                "Color",
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
+                      ColorAndSize(product: product),
                     ],
                   ),
                 ),
